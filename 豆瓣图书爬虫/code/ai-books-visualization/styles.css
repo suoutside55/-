@@ -1,0 +1,62 @@
+body {
+  font-family: 'Inter', 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.charts-container {
+  transition: all 0.3s ease;
+}
+
+.charts-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+table tr:hover {
+  background-color: #f0f4f8;
+  transition: background-color 0.3s ease;
+}
+
+.book-rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.book-rating .star {
+  color: #ffc107;
+  margin-left: 5px;
+}
+
+.price-detail {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.price-detail:last-child {
+  border-bottom: none;
+}
+
+#yearDetails a {
+  color: #3b82f6;
+}
+
+.price-detail a {
+  display: block;
+}
+#wordFrequencyChart img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

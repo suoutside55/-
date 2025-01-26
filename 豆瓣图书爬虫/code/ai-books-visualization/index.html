@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI书籍数据洞察</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <header class="text-center mb-12">
+      <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4">AI书籍数据洞察</h1>
+      <p class="text-xl text-gray-600">深入探索人工智能领域的知识图谱</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- 词频统计 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 transform transition-all hover:scale-105">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-600">关键词词频统计</h2>
+        <div id="wordFrequencyChart" class="h-64 flex items-center justify-center">
+      
+        </div>
+      </div>
+
+      <!-- 纸质版价格分析 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 transform transition-all hover:scale-105">
+        <h2 class="text-2xl font-semibold mb-4 text-green-600">纸质版价格分析</h2>
+        <div id="priceSummary" class="space-y-4">
+          <div class="price-detail">
+            <h3 class="font-semibold text-lg">最贵书籍</h3>
+            <div id="mostExpensiveBook" class="text-gray-600"></div>
+          </div>
+          <div class="price-detail">
+            <h3 class="font-semibold text-lg">最便宜书籍</h3>
+            <div id="cheapestBook" class="text-gray-600"></div>
+          </div>
+          <div class="price-detail">
+            <h3 class="font-semibold text-lg">平均价格</h3>
+            <div id="averagePrice" class="text-gray-600"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 出版时间轴 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 col-span-full transform transition-all hover:scale-105">
+        <h2 class="text-2xl font-semibold mb-4 text-purple-600">出版年份时间轴</h2>
+        <div id="publicationTimelineChart" class="h-64"></div>
+      </div>
+
+      <!-- 评分榜前十书籍 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 col-span-full transform transition-all hover:scale-105">
+        <h2 class="text-2xl font-semibold mb-4 text-red-600">评分榜 Top 10</h2>
+        <div id="topRatedBooksTable" class="overflow-x-auto">
+          <table class="min-w-full">
+            <thead>
+              <tr>
+                <th class="px-4 py-2">书名</th>
+                <th class="px-4 py-2">作者</th>
+                <th class="px-4 py-2">出版社</th>
+                <th class="px-4 py-2">出版年份</th>
+                <th class="px-4 py-2">评分</th>
+                <th class="px-4 py-2">价格</th>
+              </tr>
+            </thead>
+            <tbody id="topRatedBooksBody">
+              <!-- 这里将被 JavaScript 填充 -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="d3.v7.min.js"></script>
+  <script src="echarts.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
